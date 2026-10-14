@@ -78,25 +78,25 @@
         <!-- 頂部資訊列 (支援小螢幕自動折疊與彈性收縮) -->
         <div class="flex justify-between items-start w-full gap-2">
             <!-- 左上角：小狗狀態儀表板 (可折疊設計，避免遮擋中央畫面) -->
-            <div id="dog-status-card" class="ui-element bg-slate-900/85 backdrop-blur-md rounded-2xl border border-slate-700/60 shadow-2xl p-2.5 sm:p-4 max-w-[210px] sm:max-w-xs transition-all duration-300">
-                <div class="flex items-center justify-between gap-2">
-                    <div class="flex items-center gap-2 sm:gap-3 cursor-pointer" onclick="toggleStatusExpand()">
-                        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-amber-500 border-2 border-amber-400 flex items-center justify-center text-lg sm:text-2xl shadow-inner shrink-0">
+            <div id="dog-status-card" class="ui-element bg-slate-900/85 backdrop-blur-md rounded-2xl border border-slate-700/60 shadow-2xl p-2 sm:p-3.5 w-auto max-w-[165px] xs:max-w-[200px] sm:max-w-xs transition-all duration-300">
+                <div class="flex items-center justify-between gap-1.5 sm:gap-2 min-w-0">
+                    <div class="flex items-center gap-1.5 sm:gap-2.5 cursor-pointer min-w-0 flex-1" onclick="toggleStatusExpand()">
+                        <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-amber-500 border-2 border-amber-400 flex items-center justify-center text-base sm:text-2xl shadow-inner shrink-0">
                             🐶
                         </div>
-                        <div class="min-w-0">
-                            <h2 class="font-bold text-xs sm:text-base text-amber-300 flex items-center gap-1.5 truncate">
-                                <span id="dog-name-display" class="truncate">巴弟 (Buddy)</span>
-                                <span id="dog-age-badge" class="bg-amber-500/30 text-amber-300 border border-amber-400/50 text-[10px] sm:text-xs px-2 py-0.5 rounded-full font-bold shrink-0">3 歲</span>
-                                <button onclick="event.stopPropagation(); renameDog()" class="text-[10px] sm:text-xs text-slate-400 hover:text-white p-0.5">
+                        <div class="min-w-0 flex-1">
+                            <div class="flex items-center gap-1 min-w-0">
+                                <span id="dog-name-display" class="font-bold text-[11px] sm:text-base text-amber-300 truncate block max-w-[65px] xs:max-w-[85px] sm:max-w-[120px]">巴弟 (Buddy)</span>
+                                <span id="dog-age-badge" class="bg-amber-500/30 text-amber-300 border border-amber-400/50 text-[9px] sm:text-xs px-1.5 py-0.5 rounded-full font-bold shrink-0">3 歲</span>
+                                <button onclick="event.stopPropagation(); renameDog()" class="text-[9px] sm:text-xs text-slate-400 hover:text-white p-0.5 shrink-0" title="修改名字">
                                     <i class="fas fa-pen"></i>
                                 </button>
-                            </h2>
-                            <span id="dog-state-tag" class="inline-block text-[10px] sm:text-xs bg-green-500/20 text-green-400 px-1.5 sm:px-2 py-0.5 rounded-full font-medium truncate max-w-[120px]">悠閒散步中</span>
+                            </div>
+                            <span id="dog-state-tag" class="block text-[9px] sm:text-xs bg-green-500/20 text-green-400 px-1 sm:px-1.5 py-0.5 rounded-full font-medium truncate max-w-[100px] sm:max-w-[120px] mt-0.5">悠閒散步中</span>
                         </div>
                     </div>
                     <!-- 折疊狀態條切換按鈕 -->
-                    <button onclick="toggleStatusExpand()" id="status-toggle-btn" class="text-slate-400 hover:text-white p-1 text-xs sm:hidden shrink-0" title="展開/收合數值">
+                    <button onclick="toggleStatusExpand()" id="status-toggle-btn" class="text-slate-400 hover:text-white p-0.5 text-xs sm:hidden shrink-0" title="展開/收合數值">
                         <i class="fas fa-chevron-down transition-transform duration-300" id="status-chevron"></i>
                     </button>
                 </div>
